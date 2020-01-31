@@ -4,6 +4,7 @@ body {
     margin :0;
     padding: 0;
     background-color: rgb(236, 236, 234);
+    font-family: 'Roboto', sans-serif;
 }
 
 .information-container, .about {
@@ -47,7 +48,6 @@ body {
 .container-links {
     width: 300px;
     margin-left: 30px;
-    font-family: 'Roboto', sans-serif;
     
 }
 
@@ -65,7 +65,26 @@ i{
     float: left;
 }
 
+.fa-bars {
+    font-size: 25px;
+    margin-left: 1%;
+    margin-top: 1%;
+    color: rgb(101, 65, 184);
+}
+
+.plus {
+    font-size: 55px;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    margin-top: 80px;
+    margin-left: 12px;
+}
+
 .photo, .profile {
+    background-image: url("images/profile-photo.jpg");
+    background-size: 100% 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 38% 100%);
     float: right;
     height: 100%;
     margin: 0;
@@ -79,9 +98,8 @@ i{
 
 .about {
     background-color: white;
-    font-family: 'Roboto', sans-serif;
     margin-top: 60px;
-    height: 250px;
+    height: 200px;
     margin: 0 auto;
     width: 81.2%;
     padding-bottom: 60px;
@@ -119,16 +137,27 @@ hr {
 }
 
 .education {
-    font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     width: 18%;
+    margin-left: 41%;
     text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Oswald', sans-serif;
 }
 
-.book {
+.skills {
+    margin: 0 auto;
+    width: 13%;
+    margin-left: 43%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.book, .skills-icon {
     height: 50px;
     float: left;
-    margin-top: -4px;
+    margin-top: 0px;
 }
 
 .social {
@@ -141,4 +170,240 @@ hr {
     margin-right: 15px;
 }
 
+.timeline {
+    position: relative;
+    margin: 1px auto;
+    padding: 20px 0;
+    width: 1000px;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+    box-sizing: border-box;
+}
 
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    height: 90%;
+    background: rgb(92, 173, 99)
+}
+
+.timeline ul {
+    margin : 0;
+    padding: 0;
+}
+
+.timeline ul li {
+    list-style: none;
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline ul li:nth-child(odd){
+    float: left;
+    text-align: left;
+    clear: both;
+}
+
+.timeline ul li:nth-child(even){
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.content {  
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+    border-left: royalblue 5px solid;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.timeline ul li:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -24px;
+    width: 45px;
+    height: 45px;
+    background: rgb(92, 173, 99, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(92, 173, 99, 0.2);
+}
+
+.timeline ul li:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -22px;
+    width: 45px;
+    height: 45px;
+    background: rgb(92, 173, 99, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(92, 173, 99, 0.2);
+}
+
+.timeline ul li h3 {
+    margin: 0;
+    padding: 0;
+    color: rgb(92, 173, 99, 1);
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+}
+
+.timeline ul li p {
+    margin: 8px 0 0;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 0;
+}
+
+.sp {
+    margin-top: 1px;
+}
+
+.timeline ul li h4 {
+    margin-bottom: 0px;
+}
+
+.skills-container {
+    background-color: rgb(92, 173, 99);
+    height: 430px;
+    padding: 0;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.content-titles {
+    line-height: 25px;
+}
+
+.professional, .personal, .software {
+    width: 33.33%;
+    height: 100%;
+    float: left;
+}
+
+.professional h3, .software h3, .personal h3 {
+    padding-top: 16px;
+    text-align: center;
+}
+
+.p-1 h4{
+    margin-left: 9%;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+}
+
+.progress-bar {
+    background-color: #1a1a1a;
+    height: 15px;
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+}
+
+.progress-bar span {
+    display: inline-block;
+    height: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    transition: width .4s ease-in-out;
+    background: #ccc;
+}
+
+.blue span {
+    background-color: #34c2e3;
+}
+
+.orange span {
+    background-color: orange;
+}
+
+.gray span {
+    background-color: gray;
+}
+
+.vinotinto span {
+    background-color: rgb(146, 41, 82);;
+}
+
+.stripes span {
+    background-size: 30px 30px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+        transparent 75%, transparent); 
+    animation: animate-stripes 3s linear infinite;
+}
+
+@keyframes animate-stripes {
+    0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}
+  
+.shine span {
+    position: relative;
+}
+  
+.shine span::after {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 3px;
+    animation: animate-shine 2s ease-out infinite;             
+}
+  
+@keyframes animate-shine {
+    0% {opacity: 0; width: 0;}
+    50% {opacity: .5;}
+    100% {opacity: 0; width: 95%;}
+}
+  
+.glow span {
+    box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;    
+    animation: animate-glow 1s ease-out infinite;          
+}
+  
+@keyframes animate-glow {
+    0% { box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;} 
+    50% { box-shadow: 0 5px 5px rgba(255, 255, 255, .3) inset, 0 -5px 5px rgba(255, 255, 255, .3) inset;} 
+    100% { box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;}
+}
+
+.skill-name {
+    float:left;
+}
+
+
+.skill-percentage {
+    float: right;
+    
+}
+.skill-name-container{
+    margin-bottom: 7%;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.skill-name h4, .skill-percentage h4 {
+    padding: 0;
+    margin: 0;
+}
+
+.p-1 {
+    padding:5px;
+    margin-bottom: 25px;
+}
